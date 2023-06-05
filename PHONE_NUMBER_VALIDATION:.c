@@ -1,4 +1,4 @@
-	#include<stdio.h>
+#include<stdio.h>
 int main()
 {
     long long int n;
@@ -7,6 +7,8 @@ int main()
     {
         printf("Valid");
     }
-    else { printf("Invalid");
+    else
+    {
+        printf("Invalid");
     }
 }
