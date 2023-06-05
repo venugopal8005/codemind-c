@@ -1,40 +1,27 @@
 #include<stdio.h>
 int main()
 {
-int n,count=0,count2=0;
-scanf("%d",&n);
-int temp=n,r;
-while (temp!=0)
-{
-    r=temp%10;
-    temp=temp/10;
-    if (r%2==0)
+    int n,r,c=0,j=0;
+    scanf("%d",&n);
+    while(n>0)
     {
-        count++;
+        r=n%10;
+        if(r%2==0)
+        c++;
+        else
+        j++;
+        n=n/10;
     }
-    if (r%2!=0)
+    if(c>0 && j==0)
     {
-        count2++;
+        printf("Even");
     }
-    
-    
-}
-if (count>0&&count2>0)
-{
-    printf("Mixed");
-}
-else if (count>0)
-{
-    printf("Even");
-}
-else if (count2>0)
-{
-    printf("Odd");
-}
-
-
-
-
-
-    return 0;
+    else if(c==0 && j>0)
+    {
+        printf("Odd");
+    }
+    else
+    {
+        printf("Mixed");
+    }
 }
